@@ -1,0 +1,17 @@
+[
+  {
+    "pdb_id": "7pbc_b",
+    "chain": "A",
+    "full_sequence": "WDGETRKVKAHSQTHRVDLGTLRGYYNQS",
+    "cdr3_sequence": "ETRKVKAHSQTHRVDLGTLRGYY",
+    "loop_start": 3,
+    "loop_end": 26,
+    "n_flank_before": 3,
+    "n_flank_after": 3,
+    "loop_length": 23,
+    "total_length": 29,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/segment_dataset/7pbc_b_A_64-86.pdb",
+    "segment_type": "helix",
+    "seg_resnum": "64-86"
+  }
+]

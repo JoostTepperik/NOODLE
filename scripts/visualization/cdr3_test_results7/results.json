@@ -1,0 +1,38 @@
+[
+  {
+    "pdb_id": "7l1d_b",
+    "chain": "E",
+    "sequence": "CASSGLAGGPVSGANVLTF",
+    "loop_length": 19,
+    "best_rmsd": 16.66112107544233,
+    "mean_rmsd": 16.66112107544233,
+    "all_rmsds": [
+      16.66112107544233
+    ],
+    "best_rmsd_aln": 7.039018411178322,
+    "mean_rmsd_aln": 7.039018411178322,
+    "all_rmsds_aln": [
+      7.039018411178322
+    ],
+    "e_native": 111.89016723632812,
+    "best_energy": 131.49008178710938,
+    "ideal_energy": 82.52756906109319,
+    "energy_gap": 48.962512726016186,
+    "mean_diversity": NaN,
+    "clash_enabled": false,
+    "native_clash_intra": 0.0,
+    "native_clash_fw": 0.0,
+    "native_clash_total": 0.0,
+    "baseline_uniform_best": null,
+    "baseline_uniform_mean": null,
+    "baseline_model_best": null,
+    "baseline_model_mean": null,
+    "per_struct_div": [
+      NaN
+    ],
+    "best_closure": 0.03009328432381153,
+    "selected_indices": [
+      0
+    ]
+  }
+]

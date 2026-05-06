@@ -1,0 +1,29 @@
+.data
+.logs
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data
+data/
+*.csv
+*.parquet
+*.pdb
+*.cif
+*.h5
+# Models
+*.pt
+*.ckpt
+scripts/training/outputs/
+wandb/
+*.wandb
+# Logs
+*.log
+*.out
+*.err
+*.png
+# System
+.DS_Store

@@ -1,0 +1,15 @@
+{
+  "max_context": 7,
+  "embed_dim": 64,
+  "hidden_dim": 768,
+  "n_layers": 3,
+  "dropout_rate": 0.1,
+  "batch_size": 2048,
+  "learning_rate": 0.001,
+  "lambda_kappa": 0.01,
+  "n_epochs": 30,
+  "warmup_steps": 1000,
+  "seed": 42,
+  "prediction_type": "binned",
+  "n_bins": 36
+}

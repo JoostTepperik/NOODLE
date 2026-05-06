@@ -1,0 +1,442 @@
+[
+  {
+    "pdb_id": "1BD2",
+    "chain": "B",
+    "sequence": "CRVNHVTLSQPKIVKW",
+    "length": 16,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/1BD2_B_CRVNHVTLSQ.pdb",
+    "method": "C_aromatic"
+  },
+  {
+    "pdb_id": "1BD2",
+    "chain": "D",
+    "sequence": "CAAMEGAQKLVF",
+    "length": 12,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/1BD2_D_CAAMEGAQKL.pdb",
+    "method": "imgt"
+  },
+  {
+    "pdb_id": "1FYT",
+    "chain": "A",
+    "sequence": "CRVEHWGLDEPLLKH",
+    "length": 15,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/1FYT_A_CRVEHWGLDE.pdb",
+    "method": "C_aromatic"
+  },
+  {
+    "pdb_id": "1FYT",
+    "chain": "B",
+    "sequence": "CRHNYGVGESF",
+    "length": 11,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/1FYT_B_CRHNYGVGES.pdb",
+    "method": "C_aromatic"
+  },
+  {
+    "pdb_id": "1FYT",
+    "chain": "D",
+    "sequence": "CAVSESPFGNEKLTF",
+    "length": 15,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/1FYT_D_CAVSESPFGN.pdb",
+    "method": "imgt"
+  },
+  {
+    "pdb_id": "2BNR",
+    "chain": "B",
+    "sequence": "CRVNHVTLSQPKIVKW",
+    "length": 16,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/2BNR_B_CRVNHVTLSQ.pdb",
+    "method": "C_aromatic"
+  },
+  {
+    "pdb_id": "2IAM",
+    "chain": "A",
+    "sequence": "CRVEHWGLDEPLLKH",
+    "length": 15,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/2IAM_A_CRVEHWGLDE.pdb",
+    "method": "C_aromatic"
+  },
+  {
+    "pdb_id": "2IAM",
+    "chain": "B",
+    "sequence": "CRHNYGVGESF",
+    "length": 11,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/2IAM_B_CRHNYGVGES.pdb",
+    "method": "C_aromatic"
+  },
+  {
+    "pdb_id": "2IAM",
+    "chain": "C",
+    "sequence": "CAALIQGAQKLVF",
+    "length": 13,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/2IAM_C_CAALIQGAQK.pdb",
+    "method": "imgt"
+  },
+  {
+    "pdb_id": "3QIU",
+    "chain": "A",
+    "sequence": "CEVDHWGLEEPLRKH",
+    "length": 15,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/3QIU_A_CEVDHWGLEE.pdb",
+    "method": "C_aromatic"
+  },
+  {
+    "pdb_id": "3QIU",
+    "chain": "B",
+    "sequence": "CHFYNGTQRVRLLVRY",
+    "length": 16,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/3QIU_B_CHFYNGTQRV.pdb",
+    "method": "C_aromatic"
+  },
+  {
+    "pdb_id": "3QIU",
+    "chain": "C",
+    "sequence": "CAAEPSSGQKLVF",
+    "length": 13,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/3QIU_C_CAAEPSSGQK.pdb",
+    "method": "imgt"
+  },
+  {
+    "pdb_id": "5EU6",
+    "chain": "B",
+    "sequence": "CRVNHVTLSQPKIVKW",
+    "length": 16,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/5EU6_B_CRVNHVTLSQ.pdb",
+    "method": "C_aromatic"
+  },
+  {
+    "pdb_id": "6JXR",
+    "chain": "d",
+    "sequence": "CNGTDIY",
+    "length": 7,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/6JXR_d_CNGTDIY.pdb",
+    "method": "C_aromatic"
+  },
+  {
+    "pdb_id": "6JXR",
+    "chain": "f",
+    "sequence": "CYPRGSKPEDANF",
+    "length": 13,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/6JXR_f_CYPRGSKPED.pdb",
+    "method": "C_aromatic"
+  },
+  {
+    "pdb_id": "6JXR",
+    "chain": "g",
+    "sequence": "CQNCIELNAATISGF",
+    "length": 15,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/6JXR_g_CQNCIELNAA.pdb",
+    "method": "C_aromatic"
+  },
+  {
+    "pdb_id": "6JXR",
+    "chain": "e",
+    "sequence": "CYPRGSKPEDANF",
+    "length": 13,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/6JXR_e_CYPRGSKPED.pdb",
+    "method": "C_aromatic"
+  },
+  {
+    "pdb_id": "1KGC",
+    "chain": "D",
+    "sequence": "CILPLAGGTSYGKLTF",
+    "length": 16,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/1KGC_D_CILPLAGGTS.pdb",
+    "method": "imgt"
+  },
+  {
+    "pdb_id": "3HG1",
+    "chain": "B",
+    "sequence": "CRVNHVTLSQPKIVKW",
+    "length": 16,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/3HG1_B_CRVNHVTLSQ.pdb",
+    "method": "C_aromatic"
+  },
+  {
+    "pdb_id": "3HG1",
+    "chain": "D",
+    "sequence": "CAVNVAGKSTF",
+    "length": 11,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/3HG1_D_CAVNVAGKST.pdb",
+    "method": "imgt"
+  },
+  {
+    "pdb_id": "3MBE",
+    "chain": "A",
+    "sequence": "CKVEHWGLEEPVLKH",
+    "length": 15,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/3MBE_A_CKVEHWGLEE.pdb",
+    "method": "C_aromatic"
+  },
+  {
+    "pdb_id": "3MBE",
+    "chain": "B",
+    "sequence": "CHVEHPSLKSPITVEW",
+    "length": 16,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/3MBE_B_CHVEHPSLKS.pdb",
+    "method": "C_aromatic"
+  },
+  {
+    "pdb_id": "3MBE",
+    "chain": "C",
+    "sequence": "CAAEDGGSGNKLIF",
+    "length": 14,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/3MBE_C_CAAEDGGSGN.pdb",
+    "method": "imgt"
+  },
+  {
+    "pdb_id": "3MBE",
+    "chain": "E",
+    "sequence": "CKVEHWGLEEPVLKH",
+    "length": 15,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/3MBE_E_CKVEHWGLEE.pdb",
+    "method": "C_aromatic"
+  },
+  {
+    "pdb_id": "3MBE",
+    "chain": "F",
+    "sequence": "CHVEHPSLKSPITVEW",
+    "length": 16,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/3MBE_F_CHVEHPSLKS.pdb",
+    "method": "C_aromatic"
+  },
+  {
+    "pdb_id": "3MBE",
+    "chain": "G",
+    "sequence": "CAAEDGGSGNKLIF",
+    "length": 14,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/3MBE_G_CAAEDGGSGN.pdb",
+    "method": "imgt"
+  },
+  {
+    "pdb_id": "4JFH",
+    "chain": "D",
+    "sequence": "CAVNDGGRLTF",
+    "length": 11,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/4JFH_D_CAVNDGGRLT.pdb",
+    "method": "imgt"
+  },
+  {
+    "pdb_id": "5BRZ",
+    "chain": "B",
+    "sequence": "CRVNHVTLSQPKIVKW",
+    "length": 16,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/5BRZ_B_CRVNHVTLSQ.pdb",
+    "method": "C_aromatic"
+  },
+  {
+    "pdb_id": "5BRZ",
+    "chain": "D",
+    "sequence": "CAVRPGGAGPFFVVF",
+    "length": 15,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/5BRZ_D_CAVRPGGAGP.pdb",
+    "method": "imgt"
+  },
+  {
+    "pdb_id": "6EQA",
+    "chain": "B",
+    "sequence": "CRVNHVTLSQPKIVKW",
+    "length": 16,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/6EQA_B_CRVNHVTLSQ.pdb",
+    "method": "C_aromatic"
+  },
+  {
+    "pdb_id": "6EQA",
+    "chain": "D",
+    "sequence": "CAVNVAGKSTF",
+    "length": 11,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/6EQA_D_CAVNVAGKST.pdb",
+    "method": "imgt"
+  },
+  {
+    "pdb_id": "1AO7",
+    "chain": "B",
+    "sequence": "CRVNHVTLSQPCIVKW",
+    "length": 16,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/1AO7_B_CRVNHVTLSQ.pdb",
+    "method": "C_aromatic"
+  },
+  {
+    "pdb_id": "1AO7",
+    "chain": "D",
+    "sequence": "CAVTTDSWGKLQF",
+    "length": 13,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/1AO7_D_CAVTTDSWGK.pdb",
+    "method": "imgt"
+  },
+  {
+    "pdb_id": "1LP9",
+    "chain": "B",
+    "sequence": "CRVNHVTLSQPKIVKW",
+    "length": 16,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/1LP9_B_CRVNHVTLSQ.pdb",
+    "method": "C_aromatic"
+  },
+  {
+    "pdb_id": "1LP9",
+    "chain": "E",
+    "sequence": "CALFLASSSFSKLVF",
+    "length": 15,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/1LP9_E_CALFLASSSF.pdb",
+    "method": "imgt"
+  },
+  {
+    "pdb_id": "1LP9",
+    "chain": "I",
+    "sequence": "CRVNHVTLSQPKIVKW",
+    "length": 16,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/1LP9_I_CRVNHVTLSQ.pdb",
+    "method": "C_aromatic"
+  },
+  {
+    "pdb_id": "1LP9",
+    "chain": "L",
+    "sequence": "CALFLASSSFSKLVF",
+    "length": 15,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/1LP9_L_CALFLASSSF.pdb",
+    "method": "imgt"
+  },
+  {
+    "pdb_id": "2NX5",
+    "chain": "B",
+    "sequence": "CRVNHVTLSQPKIVKW",
+    "length": 16,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/2NX5_B_CRVNHVTLSQ.pdb",
+    "method": "C_aromatic"
+  },
+  {
+    "pdb_id": "2NX5",
+    "chain": "D",
+    "sequence": "CAVQASGGSYIPTF",
+    "length": 14,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/2NX5_D_CAVQASGGSY.pdb",
+    "method": "imgt"
+  },
+  {
+    "pdb_id": "2NX5",
+    "chain": "G",
+    "sequence": "CRVNHVTLSQPKIVKW",
+    "length": 16,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/2NX5_G_CRVNHVTLSQ.pdb",
+    "method": "C_aromatic"
+  },
+  {
+    "pdb_id": "2NX5",
+    "chain": "I",
+    "sequence": "CAVQASGGSYIPTF",
+    "length": 14,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/2NX5_I_CAVQASGGSY.pdb",
+    "method": "imgt"
+  },
+  {
+    "pdb_id": "2NX5",
+    "chain": "L",
+    "sequence": "CRVNHVTLSQPKIVKW",
+    "length": 16,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/2NX5_L_CRVNHVTLSQ.pdb",
+    "method": "C_aromatic"
+  },
+  {
+    "pdb_id": "2NX5",
+    "chain": "N",
+    "sequence": "CAVQASGGSYIPTF",
+    "length": 14,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/2NX5_N_CAVQASGGSY.pdb",
+    "method": "imgt"
+  },
+  {
+    "pdb_id": "2NX5",
+    "chain": "R",
+    "sequence": "CRVNHVTLSQPKIVKW",
+    "length": 16,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/2NX5_R_CRVNHVTLSQ.pdb",
+    "method": "C_aromatic"
+  },
+  {
+    "pdb_id": "2NX5",
+    "chain": "T",
+    "sequence": "CAVQASGGSYIPTF",
+    "length": 14,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/2NX5_T_CAVQASGGSY.pdb",
+    "method": "imgt"
+  },
+  {
+    "pdb_id": "3PL6",
+    "chain": "A",
+    "sequence": "CKVEHWGLDQPLLKH",
+    "length": 15,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/3PL6_A_CKVEHWGLDQ.pdb",
+    "method": "C_aromatic"
+  },
+  {
+    "pdb_id": "3PL6",
+    "chain": "B",
+    "sequence": "CHVEHPSLQSPITVEW",
+    "length": 16,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/3PL6_B_CHVEHPSLQS.pdb",
+    "method": "C_aromatic"
+  },
+  {
+    "pdb_id": "3PL6",
+    "chain": "C",
+    "sequence": "CAASSFGNEKLTF",
+    "length": 13,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/3PL6_C_CAASSFGNEK.pdb",
+    "method": "imgt"
+  },
+  {
+    "pdb_id": "4P5T",
+    "chain": "A",
+    "sequence": "CAASRDSGQKLVF",
+    "length": 13,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/4P5T_A_CAASRDSGQK.pdb",
+    "method": "imgt"
+  },
+  {
+    "pdb_id": "4P5T",
+    "chain": "C",
+    "sequence": "CKVEHWGLEEPVLKH",
+    "length": 15,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/4P5T_C_CKVEHWGLEE.pdb",
+    "method": "C_aromatic"
+  },
+  {
+    "pdb_id": "4P5T",
+    "chain": "D",
+    "sequence": "CRHNYEGPETH",
+    "length": 11,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/4P5T_D_CRHNYEGPET.pdb",
+    "method": "C_aromatic"
+  },
+  {
+    "pdb_id": "4P5T",
+    "chain": "E",
+    "sequence": "CAASRDSGQKLVF",
+    "length": 13,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/4P5T_E_CAASRDSGQK.pdb",
+    "method": "imgt"
+  },
+  {
+    "pdb_id": "4P5T",
+    "chain": "G",
+    "sequence": "CKVEHWGLEEPVLKH",
+    "length": 15,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/4P5T_G_CKVEHWGLEE.pdb",
+    "method": "C_aromatic"
+  },
+  {
+    "pdb_id": "4P5T",
+    "chain": "H",
+    "sequence": "CRHNYEGPETH",
+    "length": 11,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/4P5T_H_CRHNYEGPET.pdb",
+    "method": "C_aromatic"
+  },
+  {
+    "pdb_id": "5TEZ",
+    "chain": "B",
+    "sequence": "CRVNHVTLSQPKIVKW",
+    "length": 16,
+    "pdb_file": "/gpfs/home2/jtepperik/thesis/energy_model/scripts/data_processing/reference_data/cdr3_dataset/5TEZ_B_CRVNHVTLSQ.pdb",
+    "method": "C_aromatic"
+  }
+]
