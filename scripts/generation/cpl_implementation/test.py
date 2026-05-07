@@ -55,10 +55,22 @@ def _make_nerf_module():
         ])
         return c + np.column_stack([bc_hat, n_hat, m_hat]) @ d
 
-    def build_loop(pN, pCA, pC, psi_prev, phi, psi, omega=None):
+    def build_loop(pN, pCA, pC, psi_prev, phi, psi, omega=None, reverse=False):
+        phi = np.asarray(phi, dtype=float)
+        psi = np.asarray(psi, dtype=float)
         n = len(phi)
+        if len(psi) != n:
+            raise ValueError("phi and psi must have the same length")
         if omega is None:
             omega = np.full(n, np.pi)
+        else:
+            omega = np.asarray(omega, dtype=float)
+            if len(omega) != n:
+                raise ValueError("omega must have the same length as phi/psi")
+        if reverse:
+            phi = phi[::-1]
+            psi = psi[::-1]
+            omega = omega[::-1]
         L = BOND_LENGTHS
         A = BOND_ANGLES_RAD
         N  = np.empty((n, 3))
@@ -248,6 +260,40 @@ def test_full_loop_roundtrip():
 
 
 # ─────────────────────────────────────────────────────────────────────────────
+# Test 2b — reverse-order build support
+# ─────────────────────────────────────────────────────────────────────────────
+
+def test_reverse_build_matches_manual_reversal():
+    print("\n── Test 2b: reverse build matches manual reversal ─────────────────")
+
+    rng = np.random.default_rng(7)
+    n_loop = 8
+    phi = rng.uniform(-np.pi, np.pi, n_loop)
+    psi = rng.uniform(-np.pi, np.pi, n_loop)
+    omega = np.full(n_loop, np.pi)
+
+    prev_N = np.array([0.0, 0.0, 0.0])
+    prev_CA = np.array([1.458, 0.1, -0.2])
+    prev_C = np.array([2.5, 1.0, 0.3])
+    psi_prev = -0.9
+
+    N_a, CA_a, C_a, O_a = _build_loop(prev_N, prev_CA, prev_C, psi_prev,
+                                       phi[::-1], psi[::-1], omega[::-1])
+    N_b, CA_b, C_b, O_b = _build_loop(prev_N, prev_CA, prev_C, psi_prev,
+                                       phi, psi, omega, reverse=True)
+
+    max_diff = max(
+        float(np.max(np.abs(N_a - N_b))),
+        float(np.max(np.abs(CA_a - CA_b))),
+        float(np.max(np.abs(C_a - C_b))),
+        float(np.max(np.abs(O_a - O_b))),
+    )
+    ok = max_diff < 1e-10
+    _check(f"max coord diff = {max_diff:.2e}", ok)
+    return ok
+
+
+# ─────────────────────────────────────────────────────────────────────────────
 # Test 3 — random seeds: solution counts and zero closure error
 # ─────────────────────────────────────────────────────────────────────────────
 
@@ -356,6 +402,7 @@ if __name__ == '__main__':
     results = {
         "tripeptide round-trip":       test_tripeptide_roundtrip(),
         "full-loop round-trip":        test_full_loop_roundtrip(),
+        "reverse build support":       test_reverse_build_matches_manual_reversal(),
         "random seeds":                test_random_seeds(),
         "vectorised == scalar":        test_vectorised_scan_matches_scalar(),
         "speed":                       test_speed(),
