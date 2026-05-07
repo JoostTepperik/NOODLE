@@ -127,6 +127,7 @@ def build_loop(
     phi:      np.ndarray,
     psi:      np.ndarray,
     omega:    np.ndarray | None = None,
+    reverse:  bool = False,
 ) -> tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
     """
     Build loop backbone coordinates (N, Cα, C′, O) via NeRF.
@@ -151,6 +152,11 @@ def build_loop(
     If ``|virt_N – target_N|`` is small the loop closes onto the C-anchor.
     Use :func:`loop_modeler.ccd_closure` to drive this distance to zero.
 
+    Set ``reverse=True`` when ``phi`` / ``psi`` / ``omega`` are provided in the
+    original loop order but you want to model the reverse loop sequence from the
+    same N-terminal anchor. In that case, torsion arrays are reversed internally
+    before NeRF placement.
+
     Args:
         prev_N, prev_CA, prev_C:
             (3,) coordinates of the last N-terminal anchor residue.
@@ -160,13 +166,29 @@ def build_loop(
         phi:   (n_loop,) φ angles in radians for loop residues 0 … n−1.
         psi:   (n_loop,) ψ angles in radians for loop residues 0 … n−1.
         omega: (n_loop,) ω angles in radians.  Defaults to all π (trans).
+        reverse:
+            If True, reverse torsion arrays before building.
 
     Returns:
         N, CA, C, O — each (n_loop, 3) float64 arrays.
     """
+    phi = np.asarray(phi, dtype=float)
+    psi = np.asarray(psi, dtype=float)
     n_loop = len(phi)
+    if len(psi) != n_loop:
+        raise ValueError("phi and psi must have the same length")
+
     if omega is None:
         omega = np.full(n_loop, np.pi)
+    else:
+        omega = np.asarray(omega, dtype=float)
+        if len(omega) != n_loop:
+            raise ValueError("omega must have the same length as phi/psi")
+
+    if reverse:
+        phi = phi[::-1]
+        psi = psi[::-1]
+        omega = omega[::-1]
 
     L = BOND_LENGTHS
     A = BOND_ANGLES_RAD
