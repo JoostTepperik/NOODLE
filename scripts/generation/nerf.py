@@ -99,8 +99,11 @@ def reverse_nerf(
     """
     Reverse-direction NeRF helper.
 
-    This helper mirrors the sign convention used by :func:`nerf` callers that
-    provide IUPAC torsions and need opposite traversal direction.
+    In this codebase, torsions are tracked in IUPAC form (φ/ψ/ω measured by
+    right-hand dihedral definition), while :func:`nerf` call sites typically
+    negate those angles before placement.  ``reverse_nerf`` applies this sign
+    inversion internally so reverse traversal callers can pass IUPAC torsions
+    directly.
     """
     return nerf(a, b, c, bond_length, bond_angle, -dihedral)
 

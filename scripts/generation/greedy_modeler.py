@@ -210,35 +210,73 @@ def _batch_place_residues(
     """
     Place n candidate residues sharing the same anchor atoms.
     Returns (N_arr, CA_arr, C_arr, O_arr) each (n, 3).
-    Alternates between forward NeRF and reverse NeRF placement.
+    Forward mode is vectorised (N/CA shared across candidates).
+    Reverse mode uses reverse_nerf and still shares N/CA across candidates.
     """
     n = len(phi_arr)
     L = BOND_LENGTHS
     A = BOND_ANGLES_RAD
 
+    if not reverse:
+        # Fast vectorised forward placement path.
+        N_i  = _nerf_place(ref_N,  ref_CA, ref_C,  L["C_N"],  A["CA_C_N"], -ref_psi)
+        CA_i = _nerf_place(ref_CA, ref_C,  N_i,    L["N_CA"], A["C_N_CA"], -omega)
+
+        bc     = CA_i - N_i
+        bc_hat = bc / np.linalg.norm(bc)
+        n_vec  = ref_C - N_i
+        n_vec -= np.dot(n_vec, bc_hat) * bc_hat
+        if np.linalg.norm(n_vec) < 1e-8:
+            tmp   = np.array([0.0, 0.0, 1.0]) if abs(bc_hat[2]) < 0.9 else np.array([1.0, 0.0, 0.0])
+            n_vec = tmp - np.dot(tmp, bc_hat) * bc_hat
+        n_hat = n_vec / np.linalg.norm(n_vec)
+        m_hat = np.cross(bc_hat, n_hat)
+
+        off_C = -L["CA_C"] * np.cos(A["N_CA_C"])
+        amp_C =  L["CA_C"] * np.sin(A["N_CA_C"])
+        C_arr = (
+            CA_i[None, :]
+            + off_C * bc_hat[None, :]
+            + amp_C * ( np.cos(phi_arr)[:, None] * n_hat[None, :]
+                      - np.sin(phi_arr)[:, None] * m_hat[None, :])
+        )
+
+        bc_O     = C_arr - CA_i[None, :]
+        bc_O_hat = bc_O / np.maximum(np.linalg.norm(bc_O, axis=1, keepdims=True), 1e-8)
+        n_O      = N_i[None, :] - CA_i[None, :]
+        dot_n    = (bc_O_hat * n_O).sum(axis=1, keepdims=True)
+        n_perp   = n_O - dot_n * bc_O_hat
+        n_hat_O  = n_perp / np.maximum(np.linalg.norm(n_perp, axis=1, keepdims=True), 1e-8)
+        m_hat_O  = np.cross(bc_O_hat, n_hat_O)
+
+        dihs  = psi_arr + np.pi
+        off_O = -L["C_O"] * np.cos(A["CA_C_O"])
+        amp_O =  L["C_O"] * np.sin(A["CA_C_O"])
+        O_arr = (
+            C_arr
+            + off_O * bc_O_hat
+            + amp_O * ( np.cos(dihs)[:, None] * n_hat_O
+                      - np.sin(dihs)[:, None] * m_hat_O)
+        )
+
+        N_arr  = np.broadcast_to(N_i,  (n, 3)).copy()
+        CA_arr = np.broadcast_to(CA_i, (n, 3)).copy()
+        return N_arr, CA_arr, C_arr, O_arr
+
+    # Reverse placement path (uses reverse_nerf atom-by-atom).
     N_arr = np.empty((n, 3), dtype=np.float64)
     CA_arr = np.empty((n, 3), dtype=np.float64)
     C_arr = np.empty((n, 3), dtype=np.float64)
     O_arr = np.empty((n, 3), dtype=np.float64)
-
-    place = _reverse_nerf_place if reverse else _nerf_place
-    ref_psi_dih = ref_psi if reverse else -ref_psi
-    omega_dih = omega if reverse else -omega
-
+    N_i = _reverse_nerf_place(ref_N, ref_CA, ref_C, L["C_N"], A["CA_C_N"], ref_psi)
+    CA_i = _reverse_nerf_place(ref_CA, ref_C, N_i, L["N_CA"], A["C_N_CA"], omega)
     for i in range(n):
-        phi_dih = float(phi_arr[i]) if reverse else float(-phi_arr[i])
-        psi_dih = float(psi_arr[i]) if reverse else float(-psi_arr[i])
-
-        N_i = place(ref_N, ref_CA, ref_C, L["C_N"], A["CA_C_N"], ref_psi_dih)
-        CA_i = place(ref_CA, ref_C, N_i, L["N_CA"], A["C_N_CA"], omega_dih)
-        C_i = place(ref_C, N_i, CA_i, L["CA_C"], A["N_CA_C"], phi_dih)
-        O_i = place(N_i, CA_i, C_i, L["C_O"], A["CA_C_O"], psi_dih - np.pi)
-
-        N_arr[i] = N_i
-        CA_arr[i] = CA_i
+        C_i = _reverse_nerf_place(ref_C, N_i, CA_i, L["CA_C"], A["N_CA_C"], float(phi_arr[i]))
+        O_i = _reverse_nerf_place(N_i, CA_i, C_i, L["C_O"], A["CA_C_O"], float(psi_arr[i] + np.pi))
         C_arr[i] = C_i
         O_arr[i] = O_i
-
+    N_arr = np.broadcast_to(N_i, (n, 3)).copy()
+    CA_arr = np.broadcast_to(CA_i, (n, 3)).copy()
     return N_arr, CA_arr, C_arr, O_arr
 
 
