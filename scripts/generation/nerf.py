@@ -88,6 +88,26 @@ def nerf(
     return c + np.column_stack([bc_hat, n_hat, m_hat]) @ d_local
 
 
+def reverse_nerf(
+    a: np.ndarray,
+    b: np.ndarray,
+    c: np.ndarray,
+    bond_length: float,
+    bond_angle: float,
+    dihedral: float,
+) -> np.ndarray:
+    """
+    Reverse-direction NeRF helper.
+
+    In this codebase, torsions are tracked in IUPAC form (φ/ψ/ω measured by
+    right-hand dihedral definition), while :func:`nerf` call sites typically
+    negate those angles before placement.  ``reverse_nerf`` applies this sign
+    inversion internally so reverse traversal callers can pass IUPAC torsions
+    directly.
+    """
+    return nerf(a, b, c, bond_length, bond_angle, -dihedral)
+
+
 # ─────────────────────────────────────────────────────────────────────────────
 # Torsion measurement helper
 # ─────────────────────────────────────────────────────────────────────────────
